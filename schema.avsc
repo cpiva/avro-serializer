@@ -1,0 +1,10 @@
+{
+  "type": "record",
+  "name": "document",
+  "namespace": "com.cloudera.sa.avro",
+  "fields": [
+              { "name": "file_path", "type": "string" },
+              { "name": "content", "type": "string" }
+            ]
+}
+
