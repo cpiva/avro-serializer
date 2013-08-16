@@ -10,8 +10,7 @@ The toolkit can be used for data ingestion from and edge node and it can be hand
 Please note this toolkit spread the load onto multiple cores but is not an alternative for more complex and fully distributed 
 ingestion tools such as flume, on the other hand it is very simple and easy to use (especially for a POC).
 
-You can edit the file to set the max data size in megabytes to be stored in every avro file (MAX_BATCH_SIZE) and the max nr of processes 
-to run in parallel (PROCESSES).
+You can edit the file constants to set the max data size in megabytes to be stored in every avro file (MAX_BATCH_SIZE) and the max number of processes to run in parallel (PROCESSES).
 
 When I coded this I used json further up in the pipeline so I decided to encode the file content in base64 because
 in my view is a more standard way of encoding binary values in text/json rather than unicode that said feel free to change
