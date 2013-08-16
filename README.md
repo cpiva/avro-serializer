@@ -38,6 +38,6 @@ http://stackoverflow.com/questions/1443158/binary-data-in-json-string-something-
 - Include snappy compression
 
 # How to use it:
-find <input_path> -name “*.*” –print | python multicore_serializer.py <output_temp_path> <hdfs_path>
+find <input_path> -name “*.*” –print | python serializer.py <output_temp_path> <hdfs_path>
 
-find /mydata/ -name “*.*” –print | python multicore_serializer.py /tmp/ /tmp/out/
+find /mydata/ -name “*.*” –print | python serializer.py /tmp/ /tmp/out/
