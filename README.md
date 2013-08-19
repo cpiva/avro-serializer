@@ -11,9 +11,7 @@ but this is not an alternative for more complex and fully distributed ingestion 
 You can edit the file constants to set the max data size in megabytes to be stored in every avro file (MAX_BATCH_SIZE) and the max number of processes to run in parallel (PROCESSES).
 
 In my usecase I used json further up in the pipeline so I decided to encode the file content in base64 because
-in my view is a more standard way of encoding binary values in text/json rather than unicode.
-
-Feel free to change the schema provided and the code to accommodate your needs.
+in my view is a more standard way of encoding binary values in text/json rather than unicode but feel free to change the schema provided and the code to accommodate your needs.
 
 (useful posts on base64)
 
