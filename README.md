@@ -3,18 +3,17 @@ avro-serializer
 
 This is a python toolkit that let you serialize in parallel lots of small arbitrary files using the avro format.
 
-The resulting avro files are automatically ingested into HDFS.
+The toolkit can be used for data ingestion from and edge node, the resulting avro files are automatically ingested into HDFS.
 
-The toolkit can be used for data ingestion from and edge node and it can be handy when you are working with lots of small files.
-
-Please note this toolkit spread the load onto multiple cores but is not an alternative for more complex and fully distributed 
-ingestion tools such as flume, on the other hand it is very simple and easy to use (especially for a POC).
+Please note the script is very simple and easy to use (especially for a POC) and the load is spreaded onto multiple cores 
+but this is not an alternative for more complex and fully distributed ingestion tools such as flume.
 
 You can edit the file constants to set the max data size in megabytes to be stored in every avro file (MAX_BATCH_SIZE) and the max number of processes to run in parallel (PROCESSES).
 
-When I coded this I used json further up in the pipeline so I decided to encode the file content in base64 because
-in my view is a more standard way of encoding binary values in text/json rather than unicode that said feel free to change
-the schema and the code to accommodate your needs.
+In my usecase I used json further up in the pipeline so I decided to encode the file content in base64 because
+in my view is a more standard way of encoding binary values in text/json rather than unicode.
+
+Feel free to change the schema provided and the code to accommodate your needs.
 
 (useful posts on base64)
 
