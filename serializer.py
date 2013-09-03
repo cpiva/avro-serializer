@@ -45,7 +45,7 @@ def process_files(output_path, hdfs_path, batch):
         data['file_path'] = file_path
         data['content'] = content
         df_writer.append(data)
-    
+
     df_writer.close()
     time.sleep(1)
     hdfs_put(output_path + output_filename, hdfs_path)
@@ -69,7 +69,7 @@ def get_batches(files):
     if len(batch):
         batches.append(batch)
         print "batches:", len(batches)
-    
+
     return batches
 
 
@@ -102,10 +102,10 @@ def main(output_path, hdfs_path):
     paths = read_stdin(sys.stdin)
     batches = get_batches(paths)
     print "nr of batches: " + str(len(batches)) 
-    
-    pool = Pool(processes=PROCESSES)  	
-    ans = pool.map(functools.partial(process_files, output_path, hdfs_path), batches)        
-     
+
+    pool = Pool(processes=PROCESSES)
+    ans = pool.map(functools.partial(process_files, output_path, hdfs_path), batches)
+
 
 if __name__ == "__main__":
     main(sys.argv[1], sys.argv[2])
