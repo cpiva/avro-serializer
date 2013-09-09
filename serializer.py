@@ -42,6 +42,7 @@ def process_files(output_path, hdfs_path, batch):
         bytes = read_binary(file_path)
         content = base64.b64encode(bytes)
         data = {}
+        data['doc_uuid'] = str(uuid.uuid4())
         data['file_path'] = file_path
         data['content'] = content
         df_writer.append(data)

@@ -3,6 +3,7 @@
   "name": "document",
   "namespace": "com.cloudera.sa.avro",
   "fields": [
+              { "name": "doc_uuid", "type": "string" },
               { "name": "file_path", "type": "string" },
               { "name": "content", "type": "string" }
             ]
