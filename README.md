@@ -1,7 +1,7 @@
 avro-serializer
 ===============
 
-This is a python toolkit that let you serialize in parallel lots of small arbitrary files using the avro format.
+Serialize in parallel lots of small arbitrary files using the avro format.
 
 The toolkit can be used for data ingestion from and edge node, the resulting avro files are automatically ingested into HDFS.
 
