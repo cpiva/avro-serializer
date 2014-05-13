@@ -5,8 +5,7 @@ Serialize in parallel lots of small arbitrary files using the avro format.
 
 The toolkit can be used for data ingestion from and edge node, the resulting avro files are automatically ingested into HDFS.
 
-Please note the script is very simple and easy to use (especially for a POC) and the load is spreaded onto multiple cores 
-but this is not an alternative for more complex and fully distributed ingestion tools such as flume.
+This toolkit is very simple and easy to use but this is not an alternative for more complex and fully distributed ingestion tools like flume.
 
 You can edit the file constants to set the max data size in megabytes to be stored in every avro file (MAX_BATCH_SIZE) and the max number of processes to run in parallel (PROCESSES).
 
@@ -29,6 +28,7 @@ http://stackoverflow.com/questions/1443158/binary-data-in-json-string-something-
 - Avro 1.7.4 libraries for Python http://avro.apache.org/docs/current/gettingstartedpython.html
 
 # Improvements:
+- Include a map reduce based version
 - Improve performance using iterators rather that lists
 - Add a proper command-line parsing (optparse)
 - Include snappy compression
